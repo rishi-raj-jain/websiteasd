@@ -1,31 +1,45 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Junseong Park</h1>
-			<p>
-				creates various projects using Next.js and Astro.
-			</p>
-			<h2>⚒️ I use</h2>
-			<ul>
-				<li><a href="https://nextjs.org" target="_blank">Next.js</a> for web apps</li>
-<li><a href="https://astro.build" target="_blank">Astro</a> for static pages</li>
-<li><a href="https://ui.shadcn.com" target="_blank">shadcn/ui</a> (<a href="https://tailwindcss.com" target="_blank">TailwindCSS</a> and <a href="https://www.radix-ui.com" target="_blank">RadixUI</a>) for style</li> 
-<li><a href="https://vercel.com/docs" target="_blank">Vercel</a> for project deployment</li>
-<li><a href="https://www.prisma.io" target="_blank">Prisma</a> for ORM</li> 
-			</ul>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1>🧑‍🚀 Junseong Park</h1>
+      <p>creates various projects using Next.js and Astro.</p>
+      <h2>⚒️ I use</h2>
+      <ul>
+        <li>
+          <a href="https://nextjs.org" target="_blank">Next.js</a> for web apps
+        </li>
+        <li>
+          <a href="https://astro.build" target="_blank">Astro</a> for static
+          pages
+        </li>
+        <li>
+          <a href="https://ui.shadcn.com" target="_blank">shadcn/ui</a> (<a
+            href="https://tailwindcss.com"
+            target="_blank">TailwindCSS</a
+          > and <a href="https://www.radix-ui.com" target="_blank">RadixUI</a>)
+          for style
+        </li>
+        <li>
+          <a href="https://vercel.com/docs" target="_blank">Vercel</a> for
+          project deployment
+        </li>
+        <li>
+          <a href="https://www.prisma.io" target="_blank">Prisma</a> for ORM
+        </li>
+      </ul>
+    </main>
+    <Footer />
+  </body>
 </html>
