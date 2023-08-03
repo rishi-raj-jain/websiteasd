@@ -28,6 +28,7 @@ b {
 a {
   color: #3273dc;
   transition: all 0.2s;
+  text-decoration: none;
 }
 a:hover {
   opacity: 0.5;

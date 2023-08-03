@@ -5,7 +5,7 @@ import { SITE_TITLE } from "../consts";
 
 <header>
   <h2>
-    👨🏻‍💻 {SITE_TITLE}
+    <a href="/">👨🏻‍💻 {SITE_TITLE}</a>
   </h2>
   <nav>
     <HeaderLink href="/">Home</HeaderLink>
@@ -43,5 +43,9 @@ import { SITE_TITLE } from "../consts";
   }
   h2 {
     margin: 0.5em 0;
+  }
+  header h2 a {
+    text-decoration: none;
+    color: var(--text-color);
   }
 </style>

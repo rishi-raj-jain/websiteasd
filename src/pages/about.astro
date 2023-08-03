@@ -6,11 +6,36 @@ import Layout from "../layouts/BlogPost.astro";
   title="About Me"
   description="About Me"
   pubDate={new Date("July 15 2023")}
-  updatedDate={new Date()}
   heroImage="/placeholder-about.jpg"
 >
   <p>
-    I am a web developer in South Korea. I use Next.js and Astro with TypeScript
-    to build solutions that solve my problems.
+    I am a web developer using Next.js and TypeScript to build solutions that
+    solve my problems.
   </p>
 </Layout>
+<style>
+  body {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 252, 0, 1) 33%,
+      rgba(99, 255, 0, 1) 66%,
+      rgba(0, 26, 255, 1) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
