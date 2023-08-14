@@ -14,14 +14,17 @@ export default function HeaderLink({
   const path = usePathname();
   const textColor =
     href === path
-      ? 'text-accent-foreground font-bold'
-      : 'text-muted-foreground';
+      ? 'text-accent-foreground'
+      : 'text-muted-foreground opacity-40';
 
   return (
     <li>
       <Link
         href={href}
-        className={cn(textColor, 'transition-colors block py-4')}
+        className={cn(
+          textColor,
+          'transition-all duration-200 block py-4 md:hover:opacity-100'
+        )}
       >
         {title}
       </Link>

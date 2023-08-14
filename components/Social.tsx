@@ -11,7 +11,12 @@ export default function Social({
 }) {
   return (
     <li>
-      <Link href={href} title={title} target="_blank">
+      <Link
+        href={href}
+        title={title}
+        target="_blank"
+        className="md:hover:opacity-30 transition-opacity duration-200"
+      >
         {children}
       </Link>
     </li>
