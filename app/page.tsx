@@ -3,7 +3,7 @@ import Social from '@/components/Social';
 export default function About() {
   return (
     <section className="flex flex-col gap-8">
-      <h1 className="font-bold text-3xl xl:text-4xl">Hello, I'm JsPark 🙂</h1>
+      <h1 className="font-bold text-3xl xl:text-4xl">Hello, I'm JsPark</h1>
       <p>I enjoy creating various web services using Next.js.</p>
       <ul className="flex gap-5">
         <Social href="https://github.com/jsparkdev" title="Github">
