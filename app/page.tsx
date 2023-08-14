@@ -3,7 +3,7 @@ import Social from '@/components/Social';
 export default function About() {
   return (
     <section className="flex flex-col gap-8">
-      <h1 className="font-bold text-4xl">Hello, I am JsPark!</h1>
+      <h1 className="font-bold text-3xl xl:text-4xl">Hello, I'm JsPark 🙂</h1>
       <p>I enjoy creating various web services using Next.js.</p>
       <ul className="flex gap-5">
         <Social href="https://github.com/jsparkdev" title="Github">
@@ -39,7 +39,7 @@ export default function About() {
             <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
           </svg>
         </Social>
-        <Social href="https://www.linkedin.com/in/jsparkdev/" title="LinkedIn">
+        <Social href="https://www.linkedin.com/in/jsparkdev" title="LinkedIn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

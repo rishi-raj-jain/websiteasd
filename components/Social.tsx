@@ -10,8 +10,10 @@ export default function Social({
   children: React.ReactNode;
 }) {
   return (
-    <Link href={href} title={title} target="_blank">
-      <li>{children}</li>
-    </Link>
+    <li>
+      <Link href={href} title={title} target="_blank">
+        {children}
+      </Link>
+    </li>
   );
 }

@@ -13,11 +13,16 @@ export default function HeaderLink({
 }) {
   const path = usePathname();
   const textColor =
-    href === path ? 'text-foreground font-bold' : 'text-muted-foreground';
+    href === path
+      ? 'text-accent-foreground font-bold'
+      : 'text-muted-foreground';
 
   return (
-    <li className="px-2 py-4">
-      <Link href={href} className={cn(textColor, 'transition-colors')}>
+    <li>
+      <Link
+        href={href}
+        className={cn(textColor, 'transition-colors block py-4')}
+      >
         {title}
       </Link>
     </li>
