@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Github, Linkedin, Twitter } from "lucide-react";
+---
+
+<Layout title="JsPark">
+  <main
+    class="flex flex-col gap-10 items-center w-[320px] min-h-screen py-20 cursor-default"
+  >
+    <h1 class="text-3xl group">
+      Hello, I am <span class="font-extrabold group-hover:underline"
+        >JsPark</span
+      >
+    </h1>
+    <p class="w-[300px] text-center group">
+      I am a <span class="group-hover:underline">Frontend Engineer</span> and
+      Product Engineer using <span class="group-hover:underline">Next.js</span>
+       and <span class="group-hover:underline">TypeScript</span>.
+    </p>
+    <ul class="flex gap-5">
+      <li>
+        <a
+          href="https://github.com/jsparkdev"
+          target="_blank"
+          title="Github"
+          class="hover:text-blue-500 transition-colors duration-300"
+          ><Github /></a
+        >
+      </li>
+      <li>
+        <a
+          href="https://linkedin.com/in/jsparkdev"
+          target="_blank"
+          title="Linkedin"
+          class="hover:text-blue-500 transition-colors duration-300"
+          ><Linkedin /></a
+        >
+      </li>
+      <li>
+        <a
+          href="https://x.com/jsparkdev"
+          target="_blank"
+          title="Twitter"
+          class="hover:text-blue-500 transition-colors duration-300"
+          ><Twitter /></a
+        >
+      </li>
+    </ul>
+  </main>
+</Layout>
