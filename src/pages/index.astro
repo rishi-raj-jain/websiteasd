@@ -1,50 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Github, Linkedin, Twitter } from "lucide-react";
 ---
 
 <Layout title="JsPark">
-  <main
-    class="flex flex-col gap-10 items-center w-[320px] min-h-screen py-20 cursor-default"
-  >
-    <h1 class="text-3xl group">
-      Hello, I am <span class="font-extrabold group-hover:underline"
-        >JsPark</span
+  <main class="p-8 max-w-3xl mx-auto">
+    <article class="introduce pb-4">
+      <h1
+        class="text-4xl font-semibold pb-4 text-transparent bg-clip-text bg-gradient-to-bl from-[#89ff45] to-[#007fe7] animate-bounce"
       >
-    </h1>
-    <p class="w-[300px] text-center group">
-      I am a <span class="group-hover:underline">Frontend Engineer</span> and
-      Product Engineer using <span class="group-hover:underline">Next.js</span>
-       and <span class="group-hover:underline">Astro</span>.
-    </p>
-    <ul class="flex gap-5">
-      <li>
-        <a
-          href="https://github.com/jsparkdev"
+        JsPark
+      </h1>
+      <h2 class="text-2xl pb-2">Hello, I am JsPark!</h2>
+      <p class="text-sm pb-2">
+        I'm a <span class="text-[#4bff3a]">Front End Engineer</span> in <span
+          class="text-[#ff4f4f]">South Korea</span
+        >.
+      </p>
+      <p class="text-sm">
+        And I'm interested in building stuff using Open Source Projects such as <a
+          href="https://astro.build"
           target="_blank"
-          title="Github"
-          class="desktop:hover:text-blue-500 transition-colors duration-300"
-          ><Github /></a
-        >
-      </li>
-      <li>
+          title="Astro"
+          class="text-[#ff8c2f]">Astro</a
+        >,
         <a
-          href="https://linkedin.com/in/jsparkdev"
+          href="https://remix.run"
           target="_blank"
-          title="Linkedin"
-          class="desktop:hover:text-blue-500 transition-colors duration-300"
-          ><Linkedin /></a
-        >
-      </li>
-      <li>
-        <a
-          href="https://x.com/jsparkdev"
+          class="text-[#f833ff]"
+          title="Remix">Remix</a
+        >, and <a
+          href="https://vitejs.dev"
           target="_blank"
-          title="Twitter"
-          class="desktop:hover:text-blue-500 transition-colors duration-300"
-          ><Twitter /></a
-        >
-      </li>
-    </ul>
+          title="Vite"
+          class="text-[#fcff34]">Vite</a
+        >.
+      </p>
+    </article>
+    <nav class="social">
+      <ul class="flex gap-6">
+        <li>
+          <a
+            href="https://github.com/jsparkdev"
+            target="_blank"
+            title="Github"
+            class="text-[#ff5eff]">Github</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/in/jsparkdev"
+            target="_blank"
+            title="Linkedin"
+            class="text-[#007fe7]"
+            >Linkedin
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://x.com/jsparkdev"
+            target="_blank"
+            title="Twitter"
+            class="text-[#1da1f2]"
+            >Twitter
+          </a>
+        </li>
+      </ul>
+    </nav>
   </main>
 </Layout>
