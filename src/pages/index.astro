@@ -3,15 +3,11 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="JsPark">
-  <main class="p-8 max-w-3xl mx-auto">
-    <article class="introduce pb-4">
-      <h1
-        class="text-4xl font-semibold pb-4 text-transparent bg-clip-text bg-gradient-to-bl from-[#89ff45] to-[#007fe7] animate-bounce"
-      >
-        JsPark
-      </h1>
-      <h2 class="text-2xl pb-2">Hello, I am JsPark!</h2>
-      <p class="text-sm pb-2">
+  <main>
+    <article class="introduce">
+      <h1 class="logo">JsPark</h1>
+      <h2 class="text-2xl pb-2">Hello, I'm JsPark!</h2>
+      <p class="text-sm pb-2 sm:pb-0">
         I'm a <span class="text-[#4bff3a]">Front End Engineer</span> in <span
           class="text-[#ff4f4f]">South Korea</span
         >.
@@ -28,7 +24,12 @@ import Layout from "../layouts/Layout.astro";
           target="_blank"
           class="text-[#f833ff]"
           title="Remix">Remix</a
-        >, and <a
+        >, <a
+          href="https://nextjs.org"
+          target="_blank"
+          class="text-[#5473ff]"
+          title="Next.js">Next.js</a
+        > and <a
           href="https://vitejs.dev"
           target="_blank"
           title="Vite"
