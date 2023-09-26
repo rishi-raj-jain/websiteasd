@@ -1,0 +1,23 @@
+---
+import { navMenu } from "../data";
+
+const linkClass = "transition-opacity hover:opacity-50";
+---
+
+<header class="mt-10 w-full">
+  <nav class="flex justify-center">
+    <ul
+      class="flex w-1/2 rounded-3xl px-4 py-1 text-xs justify-center gap-6 min-w-[340px]"
+    >
+      {
+        navMenu.map((menu) => (
+          <li>
+            <a href={menu.href} class={linkClass}>
+              {menu.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  description?: string;
+}
+
+const { title, href = "/", description = "" } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  title={title}
+  class="flex flex-col px-4 py-3 ring bg-transparent hover:bg-[#363636] transition-colors gruop"
+>
+  <h2 class="text-lg text-black font-bold group-hover:text-white">{title}</h2>
+  <p class="text-xs font-thin text-[#858585]">{description}</p>
+</a>

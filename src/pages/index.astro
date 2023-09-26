@@ -1,66 +1,10 @@
 ---
+import Introduce from "../components/Introduce.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="JsPark">
-  <main>
-    <article class="introduce">
-      <h1 class="logo">JsPark</h1>
-      <h2 class="text-2xl pb-2">Hello, I'm JsPark!</h2>
-      <p class="text-sm pb-2 sm:pb-0">
-        I'm a <span class="text-[#4bff3a]">Front End Engineer</span> in <span
-          class="text-[#ff4f4f]">South Korea</span
-        >.
-      </p>
-      <p class="text-sm">
-        And I'm interested in building stuff using Open Source Projects such as <a
-          href="https://astro.build"
-          target="_blank"
-          title="Astro"
-          class="text-[#ff8c2f]">Astro</a
-        >,
-        <a
-          href="https://remix.run"
-          target="_blank"
-          class="text-[#f833ff]"
-          title="Remix">Remix</a
-        >, <a
-          href="https://nextjs.org"
-          target="_blank"
-          class="text-[#5473ff]"
-          title="Next.js">Next.js</a
-        >.
-      </p>
-    </article>
-    <nav class="social">
-      <ul class="flex gap-6">
-        <li>
-          <a
-            href="https://github.com/jsparkdev"
-            target="_blank"
-            title="Github"
-            class="text-[#ff5eff]">Github</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://linkedin.com/in/jsparkdev"
-            target="_blank"
-            title="Linkedin"
-            class="text-[#007fe7]"
-            >Linkedin
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://x.com/jsparkdev"
-            target="_blank"
-            title="Twitter"
-            class="text-[#1da1f2]"
-            >Twitter
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </main>
+<Layout title="Home">
+  <section class="flex flex-col gap-3">
+    <Introduce />
+  </section>
 </Layout>
