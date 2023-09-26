@@ -1,0 +1,39 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import { contributedProjects, myProjects } from "../script/repository";
+import type { Project } from "../types";
+---
+
+<Layout title="Repositories">
+  <nav transition:animate="slide" class="flex flex-col gap-4">
+    <h1 class="text-3xl font-bold">I made</h1>
+    <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {
+        contributedProjects.map((project: Project) => (
+          <li>
+            <Card
+              title={project.name}
+              description={project.description}
+              href={project.html_url}
+            />
+          </li>
+        ))
+      }
+    </ul>
+    <h1 class="text-3xl font-bold">Contributed to</h1>
+    <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {
+        myProjects.map((project: Project) => (
+          <li>
+            <Card
+              title={project.name}
+              description={project.description}
+              href={project.html_url}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</Layout>

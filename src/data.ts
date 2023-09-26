@@ -7,6 +7,10 @@ export const navMenu = [
     href: "/links",
     title: "Links",
   },
+  {
+    href: "/repo",
+    title: "Repositories",
+  },
 ];
 
 export const links = [
