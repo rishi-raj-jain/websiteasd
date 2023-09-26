@@ -1,7 +1,5 @@
 ---
 import { navMenu } from "../data";
-
-const linkClass = "transition-opacity hover:opacity-50";
 ---
 
 <header class="mt-10 w-full">
@@ -12,7 +10,7 @@ const linkClass = "transition-opacity hover:opacity-50";
       {
         navMenu.map((menu) => (
           <li>
-            <a href={menu.href} class={linkClass}>
+            <a href={menu.href} class="transition-opacity hover:opacity-50">
               {menu.title}
             </a>
           </li>
