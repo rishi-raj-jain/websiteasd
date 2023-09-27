@@ -1,0 +1,33 @@
+name: Weekly Updates
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  update deps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+          cache: "pnpm"
+
+      - name: Dependencies
+        run: |
+          npm i -g pnpm
+          pnpm up --latest
+          pnpm i
+
+      - name: Commit and Push
+        run: |
+          git config --global user.email "${{ secrets.MY_EMAIL }}"
+          git config --global user.name "${{ secrets.MY_NAME }}"
+          git add .
+          git commit -m "build(deps): Weekly Update by GitHub Actions"
+          git push origin main
