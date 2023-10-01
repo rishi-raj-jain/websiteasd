@@ -5,7 +5,7 @@ on:
     - cron: "0 0 * * 0"
 
 jobs:
-  update deps:
+  update_deps:
     runs-on: ubuntu-latest
 
     steps:
