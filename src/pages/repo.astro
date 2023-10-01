@@ -13,9 +13,9 @@ import type { Project } from "@/types";
         contributedProjects.map((project: Project) => (
           <li>
             <Card
-              title={project.name}
+              name={project.name}
               description={project.description}
-              href={project.html_url}
+              to={project.html_url}
             />
           </li>
         ))
@@ -27,9 +27,9 @@ import type { Project } from "@/types";
         myProjects.map((project: Project) => (
           <li>
             <Card
-              title={project.name}
+              name={project.name}
               description={project.description}
-              href={project.html_url}
+              to={project.html_url}
             />
           </li>
         ))

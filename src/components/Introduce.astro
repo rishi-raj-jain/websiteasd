@@ -1,25 +1,25 @@
+---
+import { skills } from "@/data";
+import LinkText from "./LinkText.astro";
+---
+
 <h1 class="text-3xl font-bold">Hello, I'm JsPark!</h1>
 <h2 class="text-lg">
   I'm a <span class="text-[#4bff3a]">Front End Engineer</span> in <span
     class="text-[#ff4f4f]">South Korea</span
   >.
 </h2>
-<p class="text-sm">
-  And I'm interested in building stuff using <a
-    href="https://react.dev"
-    target="_blank"
-    title="Astro"
-    class="text-[#5badfa] transition-opacity hover:opacity-50">React</a
-  >,
-  <a
-    href="https://nextjs.org"
-    target="_blank"
-    class="text-[#d13dc5] transition-opacity hover:opacity-50"
-    title="Next.js">Next.js</a
-  > with <a
-    href="https://typescriptlang.org"
-    target="_blank"
-    class="text-[#375cff] transition-opacity hover:opacity-50"
-    title="TypeScript">TypeScript</a
-  >.
-</p>
+<section>
+  <p class="text-sm">And I'm interested in</p>
+  <nav class="flex gap-4">
+    {
+      skills.map((skill) => (
+        <li class="list-none hover:opacity-75 transition-opacity">
+          <LinkText to={skill.url} color={skill.color}>
+            {skill.name}
+          </LinkText>
+        </li>
+      ))
+    }
+  </nav>
+</section>

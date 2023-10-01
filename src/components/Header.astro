@@ -10,8 +10,8 @@ import { navMenu } from "../data";
       {
         navMenu.map((menu) => (
           <li>
-            <a href={menu.href} class="transition-opacity hover:opacity-50">
-              {menu.title}
+            <a href={menu.to} class="transition-opacity hover:opacity-50">
+              {menu.name}
             </a>
           </li>
         ))

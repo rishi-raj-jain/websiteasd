@@ -1,20 +1,20 @@
 ---
 interface Props {
-  title: string;
-  href: string;
-  description?: string;
+  name: string;
+  to: string;
+  description: string;
 }
 
-const { title, href = "/", description = "" } = Astro.props;
+const { name, to, description } = Astro.props;
 ---
 
 <a
-  href={href}
+  href={to}
   target="_blank"
-  title={title}
+  title={name}
   class="flex flex-col px-4 py-3 ring bg-transparent hover:bg-[#363636] transition-colors group h-full justify-between"
 >
-  <h2 class="text-lg text-white font-bold">{title}</h2>
+  <h2 class="text-lg text-white font-bold">{name}</h2>
   <p class="text-xs font-thin text-[#858585] group-hover:text-end">
     {description}
   </p>

@@ -1,0 +1,12 @@
+---
+interface Props {
+  to: string;
+  color: string;
+}
+
+const { to, color } = Astro.props;
+---
+
+<a href={to} target="_blank" style={{ color }}>
+  <slot />
+</a>
