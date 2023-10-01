@@ -2,7 +2,7 @@ name: Weekly Updates
 
 on:
   schedule:
-    - cron: "30 11 * * 1"
+    - cron: "0 0 * * 0"
 
 jobs:
   update_deps:
