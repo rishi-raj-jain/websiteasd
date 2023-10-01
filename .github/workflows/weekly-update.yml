@@ -2,7 +2,7 @@ name: Weekly Updates
 
 on:
   schedule:
-    - cron: "15 0 * * 0"
+    - cron: "30 11 * * 1"
 
 jobs:
   update_deps:
@@ -12,17 +12,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: "latest"
-          cache: "pnpm"
+          bun-version: latest
 
-      - name: Dependencies
+      - name: Install Dependencies
         run: |
-          npm i -g pnpm
-          pnpm up --latest
-          pnpm i
+          bun upgrade
+          bun install
 
       - name: Commit and Push
         run: |
