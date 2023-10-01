@@ -4,10 +4,6 @@ export const navMenu = [
     name: "Home",
   },
   {
-    to: "/links",
-    name: "Links",
-  },
-  {
     to: "/repo",
     name: "Repositories",
   },
@@ -17,39 +13,39 @@ export const socialLinks = [
   {
     to: "https://github.com/jsparkdev",
     name: "Github",
-    description: "My Github",
+    color: "#ff3bff",
   },
   {
     to: "https://x.com/jsparkdev",
     name: "Twitter",
-    description: "My Twitter",
+    color: "#3768f0",
   },
 ];
 
 export const skills = [
   {
+    to: "https://typescriptlang.org",
     name: "TypeScript",
-    url: "https://typescriptlang.org",
     color: "#3768f0",
   },
   {
+    to: "https://react.dev",
     name: "React",
-    url: "https://react.dev",
     color: "#4bdbff",
   },
   {
+    to: "https://remix.run",
     name: "Remix",
-    url: "https://remix.run",
     color: "#ff3bff",
   },
   {
+    to: "https://nextjs.org",
     name: "Next.js",
-    url: "https://nextjs.org",
     color: "#3eff48",
   },
   {
+    to: "https://bun.sh",
     name: "Bun",
-    url: "https://bun.sh",
     color: "#ecff3e",
   },
 ];

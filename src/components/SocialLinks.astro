@@ -1,0 +1,21 @@
+---
+import { socialLinks } from "@/data";
+import LinkText from "./LinkText.astro";
+---
+
+<article>
+  <h2 class="text-2xl font-bold">Social Links</h2>
+  <nav>
+    <ul class="flex gap-4">
+      {
+        socialLinks.map((link) => (
+          <li class="hover:opacity-75 transition-opacity">
+            <LinkText to={link.to} color={link.color}>
+              {link.name}
+            </LinkText>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</article>
