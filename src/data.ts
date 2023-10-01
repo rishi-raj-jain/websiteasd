@@ -39,8 +39,13 @@ export const skills = [
     color: "#ff3bff",
   },
   {
-    to: "https://nextjs.org",
-    name: "Next.js",
+    to: "https://ui.shadcn.com",
+    name: "shadcn/ui",
+    color: "#fa0000",
+  },
+  {
+    to: "https://orm.drizzle.team",
+    name: "DrizzleORM",
     color: "#3eff48",
   },
   {
