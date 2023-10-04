@@ -1,12 +1,12 @@
 ---
-import Introduce from "@/components/Introduce.astro";
+import Profile from "@/components/Profile.astro";
+import Intro from "@/components/Intro.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="Home">
-  <section class="flex flex-col gap-3">
-    <Introduce />
-    <SocialLinks />
-  </section>
+<Layout>
+  <Profile />
+  <Intro />
+  <SocialLinks />
 </Layout>

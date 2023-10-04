@@ -1,13 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-import Header from "../components/Header.astro";
 import "../styles/globals.css";
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,7 +10,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>JsPark | {title}</title>
+    <title>JsPark</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="JsPark" />
@@ -32,12 +24,11 @@ const { title } = Astro.props;
     <meta name="twitter:description" content="JsPark's website" />
     <meta name="twitter:image" content="/tw.png" />
     <meta name="twitter:image:alt" content="JsPark's website logo" />
-
-    <ViewTransitions />
   </head>
-  <body class="bg-[#1e1e1e] text-white flex flex-col gap-12">
-    <Header />
-    <main class="min-w-[350px] mx-0 md:mx-auto px-4 mb-10">
+  <body
+    class="bg-[#1e1e1e] text-white flex justify-center items-center h-screen"
+  >
+    <main class="px-5 flex flex-col gap-6 sm:gap-1.5">
       <slot />
     </main>
   </body>
