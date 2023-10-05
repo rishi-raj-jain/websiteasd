@@ -12,7 +12,6 @@ module.exports = {
         "fade-in-1": "fadeIn 1s 0.25s ease-in-out forwards",
         "fade-in-2": "fadeIn 1s 0.5s ease-in-out forwards",
         "fade-in-3": "fadeIn 1s 0.75s ease-in-out forwards",
-        "fade-in-4": "fadeIn 1s 1s ease-in-out forwards",
       },
       keyframes: {
         fadeIn: {
