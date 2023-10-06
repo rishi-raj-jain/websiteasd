@@ -8,10 +8,18 @@ module.exports = {
     },
     extend: {
       animation: {
-        "fade-in": "fadeIn 1s ease-in-out forwards",
-        "fade-in-1": "fadeIn 1s 0.25s ease-in-out forwards",
-        "fade-in-2": "fadeIn 1s 0.5s ease-in-out forwards",
-        "fade-in-3": "fadeIn 1s 0.75s ease-in-out forwards",
+        "fade-in-0": "fadeIn 1s ease-in-out forwards",
+        "fade-in-0.25": "fadeIn 1s 0.25s ease-in-out forwards",
+        "fade-in-0.5": "fadeIn 1s 0.5s ease-in-out forwards",
+        "fade-in-0.75": "fadeIn 1s 0.75s ease-in-out forwards",
+        "fade-in-0.85": "fadeIn 1s 0.85s ease-in-out forwards",
+        "fade-in-0.95": "fadeIn 1s 0.95s ease-in-out forwards",
+        "fade-in-1.05": "fadeIn 1s 1.05s ease-in-out forwards",
+        "fade-in-1.15": "fadeIn 1s 1.15s ease-in-out forwards",
+        "fade-in-1.25": "fadeIn 1s 1.25s ease-in-out forwards",
+        "fade-in-1.35": "fadeIn 1s 1.35s ease-in-out forwards",
+        "fade-in-1.45": "fadeIn 1s 1.45s ease-in-out forwards",
+        "fade-in-1.55": "fadeIn 1s 1.55s ease-in-out forwards",
       },
       keyframes: {
         fadeIn: {
