@@ -20,7 +20,7 @@ jobs:
       - name: Install Dependencies
         run: |
           bun upgrade
-          bun install
+          bun update
 
       - name: Commit and Push
         run: |
