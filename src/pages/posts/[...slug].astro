@@ -15,8 +15,8 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<PostPageLayout>
-  <section class="prose prose-invert">
+<PostPageLayout title={entry.data.title}>
+  <section class="prose prose-invert mx-auto">
     <Content />
   </section>
 </PostPageLayout>

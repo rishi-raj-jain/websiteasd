@@ -1,12 +1,14 @@
 ---
 import Meta from "@/components/Meta.astro";
 import { ViewTransitions } from "astro:transitions";
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="text-2xl bg-[#1e1e1e] text-white">
   <head>
-    <Meta />
+    <Meta title={title} />
     <ViewTransitions />
   </head>
   <body>
