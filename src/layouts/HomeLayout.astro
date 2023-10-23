@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+---
+
+<BaseLayout>
+  <main class="flex justify-center pt-20 sm:pt-0 sm:items-center h-screen">
+    <section class="px-3 flex flex-col gap-6 sm:gap-3">
+      <slot />
+    </section>
+  </main>
+</BaseLayout>

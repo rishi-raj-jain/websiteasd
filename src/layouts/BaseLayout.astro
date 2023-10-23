@@ -1,0 +1,15 @@
+---
+import Meta from "@/components/Meta.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="en" class="text-2xl bg-[#1e1e1e] text-white">
+  <head>
+    <Meta />
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
