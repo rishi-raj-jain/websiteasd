@@ -2,10 +2,8 @@
 import BaseLayout from "./BaseLayout.astro";
 ---
 
-<BaseLayout>
-  <main>
-    <section class="p-6">
-      <slot />
-    </section>
+<BaseLayout {...Astro.props}>
+  <main class="p-6">
+    <slot />
   </main>
 </BaseLayout>

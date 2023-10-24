@@ -5,7 +5,11 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 ---
 
-<PostsLayout>
+<PostsLayout
+  title="Posts - Js Park"
+  description="Contains posts to share experiences gained while working on a web project."
+  url="https://jspark.dev/posts"
+>
   <ul class="flex flex-col">
     {
       allPosts.map((post) => (

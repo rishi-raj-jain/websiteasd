@@ -1,5 +1,5 @@
 ---
-import PostPageLayout from "@/layouts/PostPageLayout.astro";
+import PostsLayout from "@/layouts/PostsLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -15,8 +15,12 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<PostPageLayout title={entry.data.title}>
+<PostsLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  url=`https://jspark.dev/posts/${entry.slug}`
+>
   <section class="prose prose-invert mx-auto">
     <Content />
   </section>
-</PostPageLayout>
+</PostsLayout>
