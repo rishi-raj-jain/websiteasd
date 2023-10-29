@@ -18,8 +18,6 @@ module.exports = {
         "fade-in-1.15": "fadeIn 1s 1.15s ease-in-out forwards",
         "fade-in-1.25": "fadeIn 1s 1.25s ease-in-out forwards",
         "fade-in-1.35": "fadeIn 1s 1.35s ease-in-out forwards",
-        "fade-in-1.45": "fadeIn 1s 1.45s ease-in-out forwards",
-        "fade-in-1.55": "fadeIn 1s 1.55s ease-in-out forwards",
       },
       keyframes: {
         fadeIn: {
