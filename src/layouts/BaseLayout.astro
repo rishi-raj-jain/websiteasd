@@ -37,7 +37,7 @@ const { title, description, url } = Astro.props;
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={url} />
 
-    <script is:inline>
+    <script type="text/partytown" is:inline>
       function speedInsightsBeforeSend(data) {
         console.log("Speed Insights before send", data);
         return data;
