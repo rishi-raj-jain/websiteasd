@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 const { title, description, url } = Astro.props;
 ---
@@ -35,6 +36,14 @@ const { title, description, url } = Astro.props;
 
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={url} />
+
+    <script is:inline>
+      function speedInsightsBeforeSend(data) {
+        console.log("Speed Insights before send", data);
+        return data;
+      }
+    </script>
+    <SpeedInsights />
 
     <ViewTransitions />
   </head>
