@@ -20,6 +20,8 @@ export default defineConfig({
           lang: "ko-KR",
         },
       },
+      favicon: "/favicon.ico",
+      sidebar: [{ label: "게시물 목록", autogenerate: { directory: "posts" } }],
       social: {
         github: "https://github.com/jsparkdev",
         "x.com": "https://x.com/jsparkdev",
