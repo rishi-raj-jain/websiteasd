@@ -1,3 +1,3 @@
-# Jspark.dev
+# Website
 
-My personal website. Built with [Astro](https://astro.build/).
+My website built with [Astro](https://astro.build) [Starlight theme](https://starlight.astro.build/ko/).
