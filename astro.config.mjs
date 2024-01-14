@@ -7,6 +7,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Js Park',
+      favicon: './favicon.png',
+      logo: {
+        src: '/src/assets/favicon.png',
+      },
       sidebar: [
         { label: 'Home', link: '/' },
         { label: 'About', link: '/about' },
