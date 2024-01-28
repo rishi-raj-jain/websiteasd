@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import "@fontsource/gamja-flower";
 ---
 
@@ -15,6 +16,8 @@ import "@fontsource/gamja-flower";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <SpeedInsights />
     <ViewTransitions />
   </head>
   <body class="bg-[#011627] text-white p-10 flex justify-center text-xl">
