@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+---
+
+<Layout>
+  <div class="flex flex-col gap-6">
+    <h1 class="text-5xl">전체 게시물</h1>
+    <ul>
+      {
+        allPosts.map((post) => {
+          return (
+            <li>
+              <a href={`/posts/${post.slug}`} class="hover:underline">
+                {post.data.title}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</Layout>

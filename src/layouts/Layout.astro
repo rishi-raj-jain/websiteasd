@@ -1,22 +1,25 @@
 ---
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+import "@fontsource/gamja-flower";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ko-KR">
   <head>
+    <title>Junseong Park | 박준성 | 웹 풀스택 개발자</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="웹 풀스택 개발자 박준성 (Junseong Park)입니다. 주로 Remix, Astro 프레임워크를 사용하며 스타일링을 위해 Tailwind CSS를 사용합니다. 또한 웹 성능 최적화에 관심이 많습니다. "
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <ViewTransitions />
   </head>
-  <body>
-    <slot />
+  <body class="bg-[#011627] text-white p-10 flex justify-center text-xl">
+    <div class="max-w-[600px]">
+      <slot />
+    </div>
   </body>
 </html>
