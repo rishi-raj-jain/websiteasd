@@ -2,12 +2,15 @@
 import { ViewTransitions } from "astro:transitions";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import "@fontsource/gamja-flower";
+
+const { postsTitle } = Astro.props;
+const title = postsTitle ? postsTitle : "Junseong Park | 박준성";
 ---
 
 <!doctype html>
 <html lang="ko-KR">
   <head>
-    <title>Junseong Park | 박준성 | 웹 풀스택 개발자</title>
+    <title>{title}</title>
     <meta charset="UTF-8" />
     <meta
       name="description"

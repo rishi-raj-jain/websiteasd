@@ -14,7 +14,7 @@ const { postEntry } = Astro.props;
 const { Content } = await postEntry.render();
 ---
 
-<Layout>
+<Layout postsTitle={postEntry.data.title}>
   <article class="flex flex-col gap-6">
     <h1 class="text-5xl">{postEntry.data.title}</h1>
     <section>
