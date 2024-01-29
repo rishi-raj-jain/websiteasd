@@ -1,6 +1,7 @@
 ---
 title: Second Post
-tags: [second, post]
+category: [second, post]
+date: 2024-01-28
 ---
 
 My Second Post

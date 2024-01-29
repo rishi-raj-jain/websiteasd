@@ -1,25 +1,50 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "~/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
+
+const allCategory = Array.from(
+  new Set(allPosts.map((post) => post.data.category).flat()),
+).sort((a, b) => a.localeCompare(b));
 ---
 
 <Layout>
-  <div class="flex flex-col gap-6">
-    <h1 class="text-5xl">전체 게시물</h1>
-    <ul>
-      {
-        allPosts.map((post) => {
-          return (
-            <li>
-              <a href={`/posts/${post.slug}`} class="hover:underline">
-                {post.data.title}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
+  <div class="flex flex-col gap-20">
+    <section class="flex flex-col gap-4">
+      <h1 class="text-5xl">전체 게시물</h1>
+      <ul>
+        {
+          allPosts.map((post) => {
+            return (
+              <li>
+                <a href={`/posts/${post.slug}`} class="hover:underline">
+                  {post.data.title}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+    <section class="flex flex-col gap-4">
+      <h1 class="text-5xl">카테고리</h1>
+      <ul class="flex gap-4">
+        {
+          allCategory.map((cat) => {
+            return (
+              <li>
+                <a
+                  href={`/category/${cat}`}
+                  class="bg-white bg-opacity-20 px-3 rounded-xl py-1.5 text-base hover:bg-opacity-30 transition-color duration-300"
+                >
+                  {cat}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
   </div>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "~/layouts/Layout.astro";
+import { parseDate } from "~/utils/date";
 
 export async function getStaticPaths() {
   const postsEntries = await getCollection("posts");
@@ -11,12 +12,31 @@ export async function getStaticPaths() {
 }
 
 const { postEntry } = Astro.props;
+const {
+  data: { title, date, category },
+} = postEntry;
 const { Content } = await postEntry.render();
 ---
 
-<Layout postsTitle={postEntry.data.title}>
+<Layout postsTitle={title}>
   <article class="flex flex-col gap-6">
-    <h1 class="text-5xl">{postEntry.data.title}</h1>
+    <div class="flex flex-col gap-1">
+      <h1 class="text-5xl">{title}</h1>
+      <section class="flex flex-col gap-2">
+        <time datetime={date.toISOString()} class="text-sm"
+          >{parseDate(date)}</time
+        >
+        <ul class="flex gap-2">
+          {
+            category.map((cat) => (
+              <li class="bg-white bg-opacity-20 px-3 rounded-xl py-1 text-base hover:bg-opacity-30 transition-color duration-300">
+                <a href={`/category/${cat}`}>{cat}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
     <section>
       <Content />
     </section>
