@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 const { postEntry } = Astro.props;
 const {
-  data: { title, date, category },
+  data: { title, date, tags },
 } = postEntry;
 const { Content } = await postEntry.render();
 ---
@@ -21,20 +21,20 @@ const { Content } = await postEntry.render();
 <Layout postsTitle={title}>
   <article class="flex flex-col gap-6">
     <div class="flex flex-col gap-1">
+      <ul class="flex gap-2">
+        {
+          tags.map((tag) => (
+            <li class="bg-white bg-opacity-20 px-3 rounded-xl py-0.5 text-base hover:bg-opacity-30 transition-color duration-300">
+              <a href={`/tags/${tag}`}>{tag}</a>
+            </li>
+          ))
+        }
+      </ul>
       <h1 class="text-5xl">{title}</h1>
       <section class="flex flex-col gap-2">
         <time datetime={date.toISOString()} class="text-sm"
           >{parseDate(date)}</time
         >
-        <ul class="flex gap-2">
-          {
-            category.map((cat) => (
-              <li class="bg-white bg-opacity-20 px-3 rounded-xl py-1 text-base hover:bg-opacity-30 transition-color duration-300">
-                <a href={`/category/${cat}`}>{cat}</a>
-              </li>
-            ))
-          }
-        </ul>
       </section>
     </div>
     <section>

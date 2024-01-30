@@ -1,6 +1,6 @@
 ---
 title: Second Post
-category: [second, post]
+tags: [second, post]
 date: 2024-01-28
 ---
 

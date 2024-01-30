@@ -4,13 +4,13 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
 
-const allCategory = Array.from(
-  new Set(allPosts.map((post) => post.data.category).flat()),
+const allTags = Array.from(
+  new Set(allPosts.map((post) => post.data.tags).flat()),
 ).sort((a, b) => a.localeCompare(b));
 ---
 
 <Layout>
-  <div class="flex flex-col gap-20">
+  <div class="flex flex-col gap-14">
     <section class="flex flex-col gap-4">
       <h1 class="text-5xl">전체 게시물</h1>
       <ul>
@@ -28,17 +28,17 @@ const allCategory = Array.from(
       </ul>
     </section>
     <section class="flex flex-col gap-4">
-      <h1 class="text-5xl">카테고리</h1>
-      <ul class="flex gap-4">
+      <h1 class="text-5xl">태그</h1>
+      <ul class="flex gap-2">
         {
-          allCategory.map((cat) => {
+          allTags.map((tag) => {
             return (
               <li>
                 <a
-                  href={`/category/${cat}`}
+                  href={`/tags/${tag}`}
                   class="bg-white bg-opacity-20 px-3 rounded-xl py-1.5 text-base hover:bg-opacity-30 transition-color duration-300"
                 >
-                  {cat}
+                  {tag}
                 </a>
               </li>
             );
