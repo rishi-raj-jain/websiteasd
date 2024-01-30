@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import SpeedInsights from "@vercel/speed-insights/astro";
-import "@fontsource/gamja-flower";
+import { AstroFont } from "astro-font";
 
 const { postsTitle } = Astro.props;
 const title = postsTitle ? postsTitle : "Junseong Park | 박준성";
@@ -25,6 +25,19 @@ const title = postsTitle ? postsTitle : "Junseong Park | 박준성";
     <link rel="manifest" href="/site.webmanifest" />
     <SpeedInsights />
     <ViewTransitions />
+    <AstroFont
+      config={[
+        {
+          src: [],
+          preload: true,
+          display: "swap",
+          name: "Gamja Flower",
+          fallback: "sans-serif",
+          cssVariable: "font-gamja",
+          googleFontsURL: 'https://fonts.googleapis.com/css2?family=Gamja+Flower',
+        },
+      ]}
+    />
   </head>
   <body class="bg-[#011627] text-white p-10 flex justify-center text-xl">
     <div class="max-w-[600px]">

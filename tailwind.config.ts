@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Gamja Flower", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-gamja)", ...defaultTheme.fontFamily.sans],
       },
     },
   },
